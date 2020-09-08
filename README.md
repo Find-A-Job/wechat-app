@@ -29,6 +29,7 @@
 ```
 
 ### 其他
+* wxss的transform属性生效发生在onReady之后,也就是说在onReady里获取不到到节点的最终状态
 ```
 
 ```
