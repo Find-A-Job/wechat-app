@@ -15,10 +15,7 @@
 
 ### .js
 ```
-  // 属性查询 改进版 用await等待结果返回
   queryPropAwait: function (params) {
-    // params.select
-    // params.fields
     var retVal = {}; //这里需要用分号隔开，要不然解释器会误认为和下面的()是一条语句
     (async () => {
       let result = await new Promise((resolve, reject) => {
@@ -30,8 +27,10 @@
       });
       // console.log('output', size, position)
       retVal = result
+      //后续语句应在此处继续
     })();
-    return retVal
+    // 后面执行的其他代码并不等待上面的箭头函数执行完成
+    // ...
   },
 ```
 
